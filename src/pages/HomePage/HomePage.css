@@ -1,0 +1,29 @@
+.home-page {
+  display: flex;
+  max-width: 935px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.feed-container {
+  flex: 2;
+  max-width: 614px;
+}
+
+.sidebar-container {
+  flex: 1;
+  margin-left: 28px;
+  position: sticky;
+  top: 88px;
+  height: fit-content;
+}
+
+@media (max-width: 935px) {
+  .sidebar-container {
+    display: none;
+  }
+  
+  .feed-container {
+    margin: 0 auto;
+  }
+}

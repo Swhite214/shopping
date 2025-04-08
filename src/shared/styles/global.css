@@ -1,0 +1,51 @@
+/* src/shared/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './reset.css';
+@import './variables.css';
+
+body {
+  font-family: "Noto Sans KR", "Roboto", sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+/*화면에서 보이지 않지만 스크리리더가 읽을수 있게 설정함.*/
+.sr-only, h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.main-content {
+  padding-top: 60px;
+}
+.flex{display: flex;}
+.conter{justify-content: center;}
+.between{justify-content: space-between;}
+.around{justify-content: space-around;}
+.evenly{justify-content: space-evenly;}
+.ai-center{align-items: center;}
+.dir-col{flex-direction: column;}
+.row-reverse{flex-direction: row-reverse}
+
+
+

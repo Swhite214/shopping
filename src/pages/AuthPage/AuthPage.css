@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.main-content{
+  padding-top: 0;
+}
+
+.auth-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+.auth-wrap{
+  width: 350px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 40px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#auth-logo{
+  font-family: "Monoton";
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: orangered;
+}
+#auth-container{
+  border-top: 1px solid #e9e9e9;
+  padding-top: 20px;
+}
+#auth-container .auth-switch{
+  margin-top: 20px;
+}
+#auth-container .auth-switch span{
+  margin-bottom: 5px;
+  display: block;
+}
+
+#auth-footer{
+  padding: 40px 0 20px;
+  font-size: 12px;
+}
+#auth-footer .text{color: #777;margin-left: 10px;}
+
