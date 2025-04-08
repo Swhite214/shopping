@@ -16,6 +16,7 @@ const Header=()=>{
             <div className='header-search'>
               <label className='sr-only'>검색</label>
               <Input placeholder='검색어를 입력하세요'/>
+              <h1>테스트</h1>
             </div>
           </div>
         </section>
