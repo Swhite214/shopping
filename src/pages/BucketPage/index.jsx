@@ -11,23 +11,42 @@ function BucketPage() {
   const idRef = useRef(0);
 
   // 초기 로딩
-  useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem('products')) || [];
-    setProducts(stored);
-    idRef.current = stored.reduce((max, p) => Math.max(max, p.id), 0);
+  useEffect(()=>{
+    const fetchProducts = async ()=>{
+      try {
+        const response = await fetch("http://localhost:8080/products");
+        const data = await response.json();
+        setProducts(data);
+        
+      } catch (error) {
+        console.error("서버에서 상품 불러오기 실패", error);
+      }
+    };
+    fetchProducts();
   }, []);
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     const newProduct = {
-      id: ++idRef.current,
       name,
       date,
       category,
       price: Number(price)
     };
-    const updated = [...products, newProduct];
-    setProducts(updated);
-    localStorage.setItem('products', JSON.stringify(updated));
+
+    try {
+      const response = await fetch("http://localhost:8080/products",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      });
+      if (!response.ok) throw new Error("상품 등록 실패");
+      const updatedProduct = await response.json();
+      setProducts([...products, updatedProduct]);
+    } catch (error) {
+      console.error(error);
+    }
 
     // 초기화
     setName('');
@@ -36,11 +55,18 @@ function BucketPage() {
     setPrice('');
   };
 
-  const handleDelete = (id) => {
-    const updated = products.filter(p => p.id !== id);
-    setProducts(updated);
-    localStorage.setItem('products', JSON.stringify(updated));
-  };
+  const handleDelete= async (id)=>{
+    try {
+      await fetch(`http://localhost:8080/products/${id}`,{
+        method: "DELETE",
+      });
+
+      setProducts(products.filter(p => p.id !== id));
+      
+    } catch (error) {
+      
+    }
+  }
 
 
   return (

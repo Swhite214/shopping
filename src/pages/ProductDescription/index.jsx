@@ -12,32 +12,64 @@ function ProductDescription() {
   const [price, setPrice] = useState('');
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem('products')) || [];
-    const found = stored.find((p) => p.id === Number(id));
-    if (!found) return navigate('/backet'); // 없으면 장바구니로
-    setProduct(found);
-    setName(found.name);
-    setDate(found.date);
-    setCategory(found.category);
-    setPrice(found.price);
+    const fetchProduct = async()=>{
+      try {
+        const response = await fetch(`http://localhost:8080/products/${id}`);
+
+        if(!response.ok){
+          throw new Error('서버 오류 발생');
+        }        
+        const data = await response.json();
+        setProduct(data);
+        setName(data.name);
+        setDate(data.date);
+        setCategory(data.category);
+        setPrice(data.price);
+      } catch (error) {
+        console.error(error);
+        navigate('/backet'); // 없으면 장바구니로
+        
+      }
+    };
+    fetchProduct();
   }, [id, navigate]);
 
-  const handleDelete = () => {
-    const stored = JSON.parse(localStorage.getItem('products')) || [];
-    const updated = stored.filter((p) => p.id !== Number(id));
-    localStorage.setItem('products', JSON.stringify(updated));
-    navigate('/backet');
+  const handleDelete= async()=>{
+    try {
+      await fetch(`http://localhost:8080/products/${id}`,{
+        method: "DELETE"
+      });
+      navigate('/backet');
+    } catch (error) {
+      console.error("삭제실패", error);
+    }
   };
 
-  const handleUpdate = () => {
-    const stored = JSON.parse(localStorage.getItem('products')) || [];
-    const updated = stored.map((p) =>
-      p.id === Number(id) ? { ...p, name, date, category, price: Number(price) } : p
-    );
-    localStorage.setItem('products', JSON.stringify(updated));
-    setProduct({ ...product, name, date, category, price: Number(price) });
-    setEditMode(false);
-  };
+  const handleUpdate= async()=>{
+    try {
+      const updatedProduct = {
+        name,
+        date,
+        category,
+        price: Number(price)
+      };
+
+      const response = await fetch(`http://localhost:8080/products/${id}`,{
+        method:"PUT",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedProduct)
+      });
+
+      if(!response.ok) throw new Error("수정 실패");
+      const data = await response.json();
+      setProduct(data);
+      setEditMode(false);
+    } catch (error) {
+      console.error("수정 실패", error)
+    }
+  }
 
   if (!product) return <p>로딩 중...</p>;
 

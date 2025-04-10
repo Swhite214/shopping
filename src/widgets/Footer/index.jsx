@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css'
-import logo from '../../app/assets/react.svg'
+import logo from '../../app/assets/butterfly-logo.svg'
 import { ArrowUp } from "lucide-react";
 const Footer = () => {
 
@@ -17,7 +17,7 @@ const Footer = () => {
                     </Link>
                     <p className='text'>
                         <span>서울특별시 강남구 테헤란로 14길 6 남도빌딩</span>
-                        <span> /team: 박찬우 김영진 정지인 이예준</span>
+                        <span> /team: 박찬우 김영진 이예준</span>
                     </p>
                     <p className='copy'>
                         <span className='text'>Copyrightⓒ{new Date().getFullYear()} Media</span>
