@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.basic{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b5525c;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  
+}
+.aaa{
+    margin-bottom: 10px; 
+}
+.abc{
+    font-size: 40px;
+    margin-top: 15px;
+}
+.bbb{
+    font-size: 40px;
+}
+.ccc{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ddd{
+    margin-top: 10px;
+}
+.img1{
+    
+    background-image: url(../../app/assets/saa.png);
+    background-size: 100%;
+    width: 540px;
+    height: 300px;
+    margin-left: 23px;
+}
+.img2{
+    
+    background-image: url(../../app/assets/ssa2.png);
+    background-size: 100%;
+    width: 540px;
+    height: 300px;
+    margin-left: 23px;
+}
+.ooo{
+    width: 100px;
+    height: 200px;
+    margin-left: 25px;
+}
+.img3{
+
+    background-image: url(../../app/assets/ssa3.svg);
+    background-size: 100%;
+    width: 540px;
+    height: 300px;
+    margin-left: 23px;
+}
+.eee{
+    margin-top: 25px;
+    color: #97bdce;
+    font-size: 50px;
+}
+.fff{
+    
+    margin-top: 10px;
+    margin-right: 30px;
+    color: #97bdce;
+    text-align: right;
+}
+.ppp{
+    margin-top: 15px 
+}
+#hhh{
+    margin-top: 10px;
+    color: #97bdce;
+}
+#last{
+    margin-top: 5px;
+    color: #97bdce;
+}
