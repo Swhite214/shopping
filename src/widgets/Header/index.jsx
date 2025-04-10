@@ -1,59 +1,112 @@
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Header.css';
 import Input from '../../shared/ui/Input';
-import Icon from '../../shared/ui/Icon';
-import Button from '../../shared/ui/Button';
-import { User } from 'lucide-react';
-const Header=()=>{
-  return (<>
-    <header className='header' >
-      <h1>헤더</h1>
+import { User, ShoppingCart, LogIn, ChevronDown, SkipBack, SkipForward, Play, Volume2, Shuffle, Music} from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import logo from "../../app/assets/butterfly-logo.svg"
+
+
+const Header = () => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [selectedSearch, setSelectedSearch] = useState('통합검색');
+  const dropdownRef = useRef(null);
+
+  const searchOptions = [
+    '가수/아티스트',
+    '수록곡명',
+    '제작사/레이블',
+    '음반명/상품명'
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <header className='header'>
       <div className='header-container'>
+        <div className="header-logo-container">
+          <img 
+            src={logo} 
+            alt="Butterfly Logo" 
+            className="header-butterfly-logo"
+          />
+          <Link to="/" className="header-logo">
+            4TunesRecords
+          </Link>
+        </div>
         <section>
-          <h1>로고</h1>
           <div className='flex ai-center'>
-            <Link to={'/'}  className='header-logo'>ORANGE</Link>
+            <div className="player-controls">
+              <div className="control-buttons">
+              <button className="control-btn"><Shuffle size={20} /></button>
+                <button className="control-btn"><SkipBack size={20} /></button>
+                <button className="control-btn play-btn"><Play size={20} /></button>
+                <button className="control-btn"><SkipForward size={20} /></button>
+                <button className="control-btn"><Music size={20} /></button>
+              </div>
+            </div>
             <div className='header-search'>
-              <label className='sr-only'>검색</label>
-              <Input placeholder='검색어를 입력하세요'/>
+              <div className="search-dropdown" ref={dropdownRef}>
+                <button 
+                  className="search-dropdown-button"
+                  onClick={() => setIsSearchOpen(!isSearchOpen)}
+                >
+                  {selectedSearch}
+                  <ChevronDown size={16} style={{ transform: isSearchOpen ? 'rotate(180deg)' : 'none' }} />
+                </button>
+                {isSearchOpen && (
+                  <ul className="search-dropdown-menu">
+                    {searchOptions.map((option) => (
+                      <li key={option}>
+                        <button
+                          className={`search-dropdown-item ${selectedSearch === option ? 'active' : ''}`}
+                          onClick={() => {
+                            setSelectedSearch(option);
+                            setIsSearchOpen(false);
+                          }}
+                        >
+                          {option}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <label className='sr-only'></label>
+              <Input placeholder='검색어를 입력하세요'  />
+            </div>
+            <div className="volume-control">
+              <button className="control-btn"><Volume2 size={20} /></button>
+              <div className="volume-slider">
+                <div className="volume-filled"></div>
+              </div>
+            </div>
+            <div className="header-icons">
+              <Link to="/login" className="header-icon">
+                <LogIn size={20} />
+              </Link>
+              <Link to="/mypage" className="header-icon">
+                <User size={20} />
+              </Link>
+              <Link to="/cart" className="header-icon">
+                <ShoppingCart size={20} />
+              </Link>
             </div>
           </div>
         </section>
-        <nav className='header-nav'>
-          <h1>메인메뉴</h1>
-          <div>
-            <ul className='flex ai-center'>
-              <li className='header-nav-item'>
-                <Link to={'/post'} >
-                  <Icon name="home" />
-                </Link>
-              </li>
-              <li className='header-nav-item'>
-                <Link to={'/'} >
-                  <Icon name="message" />
-                </Link>
-              </li>
-              <li className='header-nav-item'>
-                <Link to={'/'} >
-                  <Icon name="explore" />
-                </Link>
-              </li>
-              <li className='header-nav-item'>
-                <Link to={'/'} >
-                  <Icon name="heart" />
-                </Link>
-              </li>
-              <li className='header-nav-item'>
-                <Link to={'/auth'} >
-                  <User />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
     </header>
-  </>)
-}
+  );
+};
 
 export default Header;

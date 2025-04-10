@@ -20,10 +20,10 @@ function Section2() {
     <div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
     <a href='/'>이벤트 내용을 입력해주세요</a>
     <div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
-    <div className='ddd'><img src={logo} alt="" /> FortuneRecord</div>
+    <div className='ddd'><img src={logo} alt="" /> 4TunesRecords</div>
     </td>
     <td className='img2'>
-    <div className='bbb'>FortuneRecord</div>
+    <div className='bbb'>4TunesRecords</div>
     <div className='ccc'>이달의 할인 혜택을 만나보세요</div>
     <span ></span>
     <span><img className='ooo' src={group1} alt="" /></span>
