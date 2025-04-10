@@ -1,0 +1,17 @@
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.icon-small {
+  font-size: 16px;
+}
+
+.icon-medium {
+  font-size: 24px;
+}
+
+.icon-large {
+  font-size: 32px;
+}

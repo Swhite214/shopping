@@ -1,0 +1,17 @@
+
+/* 역할: 인증(auth)도메인에서 사용하는 UI 스타일관리 */
+/* 로그인과 회원가입 폼의 스타일을 통일하여 관리하기위해 */
+
+button[type=submit]{
+  background-color: var(--color-primary);
+  color: white;
+}
+#auth-container .auth-form{
+  border-bottom: 1px solid #e9e9e9;
+}
+#auth-container .auth-form dl{
+  margin-top: 10px;
+}
+#auth-container .auth-form dl button{
+  margin: 30px 0;
+}
