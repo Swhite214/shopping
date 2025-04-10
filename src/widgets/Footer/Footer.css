@@ -12,4 +12,37 @@
   height: 60px;
   max-width: 975px;
   margin: 0 auto;  
+  background-color: #b9bce43d;
+}
+.footer{
+  background-color: #e9e9e9;
+  position: relative;
+}
+
+.footer-container{
+  margin-left: 15px;
+  font-size: medium;
+}
+
+.logo{
+  margin:20px auto;
+  width: 60px;
+}
+
+.copy{
+  padding: 10px 0;
+}
+
+.copy > .com{
+  font-weight: bold;
+
+}
+
+.scroll-top-btn{
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 999px;
 }
