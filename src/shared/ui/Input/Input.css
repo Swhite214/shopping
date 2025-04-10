@@ -1,0 +1,54 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: rgb(139, 134, 134);
+  color: rgb(255, 247, 247);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input::placeholder {
+  color: rgb(255, 247, 247);
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.input-wrap.input-error {
+  border-color: #dc3545;
+}
+
+.input-guide-message,
+.input-error-message {
+  color: #dc3545;
+  font-size: 11px;
+  text-align: left;
+  margin-left:10px;
+  letter-spacing: -.5px;
+}
+.input-wrap{
+  display: flex;
+  border: 1px solid #ccc;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.input-icon{
+  margin-left:10px; /* 아이콘과 입력 필드 사이의 간격 */
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}

@@ -1,0 +1,35 @@
+/* src/shared/styles/variables.css */
+:root {
+  /* Colors */
+  --color-primary: #f63900;
+  --color-primary-hover: #bf2d00;
+  --color-text-primary: #262626;
+  --color-text-secondary: #8e8e8e;
+  --color-border: #dbdbdb;
+  --color-background: #fafafa;
+  --color-background-disabled: #8e8e8e;
+  --color-error: #ed4956;
+  --color-success: #78de45;
+  
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 28px;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Border Radius */
+  --border-radius-sm: 3px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 9999px;
+}
