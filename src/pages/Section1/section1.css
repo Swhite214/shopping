@@ -1,7 +1,7 @@
 .section1-container{
     display: flex;
-    width: 80%;
-    height: 100%;
+    width: 90%;
+    height: 800px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -13,13 +13,14 @@
     justify-content: center;
     background-color: #fff;
     position: relative;
+    border-radius: 20px;
 }
 
 .slide-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 6em;
+    gap: 5em;
     width: 90%;
     margin-bottom: 130px;
 }
@@ -27,42 +28,28 @@
 
 
 .slide-item{
-    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 150px;
-    width: 90%;
-    color: #333;
+    width: 110px;
     margin: 30px;
     padding: 10px;
-    font-size: 14px;
 }
 
 .imgs{
     width: 100%;
-    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .img-desc{
-    margin-top: 1em;
+    margin-top: 2em;
     font-size: 12px;
     text-align: center;
     color: #333;
     font-weight: bolder;
-}
-
-.slide-preview {
-    width: 100%;
-    height: 80%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    box-sizing: border-box;
 }
 
 .slide-right {
@@ -78,12 +65,30 @@
     padding: 10px;
 }
 
+.slide-preview {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
 
-.right-image{
-    width: 80%;
-    height: 90%;
+.slide-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 3s ease-in-out;
+}
+
+.right-image {
+    min-width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    transition: transform 3s ease-in-out;
 }
 
 .arrow-btn{
@@ -129,9 +134,9 @@
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.5;
     transition: 0.3s;
-    flex-shrink: 0;
+    
 }
 
 

@@ -2,8 +2,8 @@
 const imageList =[
     // 1페이지
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409246&FMT=2&ATTACH=M&TYPE=C",
-        desc: "선재 업고 튀어 OST (LP) 넘버링 한정반",
+        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000407331&FMT=2&ATTACH=M&TYPE=B",
+        desc: "에스파 (aespa) - 정규 1집 [Armageddon] (LP VER.)",
     },
     {
         src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408997&FMT=2&ATTACH=M&TYPE=C",

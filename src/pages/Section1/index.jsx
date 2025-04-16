@@ -32,7 +32,7 @@ const Section1=()=>{
     useEffect(()=>{
         const interval = setInterval(()=>{
             setRightPage((prev)=>(prev+1) % displayedImages.length);
-        }, 3000);
+        }, 5000);
 
         return ()=> clearInterval(interval);
     },[displayedImages]);
@@ -60,13 +60,21 @@ const Section1=()=>{
         // style={{backgroundImage: `url(${displayedImages[rightImage].src})`}}
         >
 
-            <div className="slide-preview">
-                <img 
-                    src={displayedImages[rightPage].src}
-                    alt={displayedImages[rightPage].desc}
-                    className="right-image"
-                />
-            </div>
+            <section className="slide-preview">
+                <div className="slide-wrapper" style={{
+                    transform: `translateX(-${rightPage * 100}%)`,
+                    transition: 'transform 0.5s ease-in-out',
+                }}>
+                    {displayedImages.map((item, i)=>(
+                        <img 
+                            key={i}
+                            src={item.src}
+                            alt={item.alt}
+                            className="right-image"
+                        />
+                    ))}
+                </div>
+            </section>
             
             {/* 스크롤 */}
             <div className="scroll">
