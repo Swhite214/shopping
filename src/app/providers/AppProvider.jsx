@@ -35,17 +35,14 @@ const router=createBrowserRouter([
     ]
   },
   {
-    path:"/backet",
+    path:"/product",
     element :<DefaultLayout />,
     children:[
       {
         index:true,
         element:<BucketPage/>
       },
-      {
-        path: "products/:id",
-        element: <ProductDescription />
-      }
+      
     ]
   }
 ])
