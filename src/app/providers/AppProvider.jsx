@@ -6,8 +6,9 @@ import PostPage from "@pages/PostPage"
 import FormSubmitBlocker from "./FormSubmitBlocker"
 import AuthPage from "@pages/AuthPage"
 import ErrorBoundary from "@shared/ui/ErrorBoundary"
-import BucketPage from "../../pages/BucketPage"
+import BucketPage from "@pages/BucketPage"
 import ProductDescription from "../../pages/ProductDescription"
+import ProductPage from "@pages/product/ProductPage"
 
 const router=createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router=createBrowserRouter([
         path:"post",
         element:<PostPage />
       },
+      {
+        path:"products",
+        element:<ProductPage />
+      },
+
     ]
   },
   {
@@ -42,7 +48,6 @@ const router=createBrowserRouter([
         index:true,
         element:<BucketPage/>
       },
-      
     ]
   }
 ])

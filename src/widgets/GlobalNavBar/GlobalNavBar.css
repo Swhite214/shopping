@@ -1,0 +1,122 @@
+.category-nav {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 1px solid #dee2e6;
+    width: 100%;
+  }
+  
+  .category-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .category-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+  
+  .category-list li a:hover {
+    color: #666666;
+    background-color: transparent;
+  }
+  
+  .category-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #666666;
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+  }
+  
+  .category-list li a:hover::after {
+    width: 80%;
+  }
+  
+  .category-list li {
+    position: relative;
+  }
+  
+  .subcategory-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 0;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .category-list li:hover .subcategory-list {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .subcategory-list li {
+    padding: 0;
+  }
+  
+  .subcategory-list li a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    font-weight: 400;
+  }
+  
+  .subcategory-list li a:hover {
+    background-color: #f8f9fa;
+    color: #000;
+    padding-left: 2rem;
+  }
+  
+  .subcategory-list li a::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: #666;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .subcategory-list li a:hover::before {
+    opacity: 1;
+    left: 1.2rem;
+  }
+  
+  .subcategory-list li a::after {
+    display: none;
+  }

@@ -4,6 +4,7 @@ import Input from '../../shared/ui/Input';
 import { User, ShoppingCart, LogIn, ChevronDown, SkipBack, SkipForward, Play, Volume2, Shuffle, Music} from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import logo from "../../app/assets/butterfly-logo.svg"
+import GlobalNavBar from '../GlobalNavBar';
 
 
 const Header = () => {
@@ -105,6 +106,7 @@ const Header = () => {
           </div>
         </section>
       </div>
+      <GlobalNavBar />
     </header>
   );
 };
