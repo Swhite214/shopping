@@ -1,12 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import Input from '../../shared/ui/Input';
-import { User, ShoppingCart, LogIn, ChevronDown, SkipBack, SkipForward, Play, Volume2, Shuffle, Music} from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+import { User, ShoppingCart, LogIn, ChevronDown, SkipBack, SkipForward, Play, Volume2, Shuffle, Music,LogOut} from 'lucide-react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import logo from "../../app/assets/butterfly-logo.svg"
 import GlobalNavBar from '../GlobalNavBar/index.jsx';
 import Button from '../../shared/ui/Button/index.jsx';
 import axios from 'axios';
+import { AuthContext } from '../../context/AuthContext.jsx';
 
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -16,7 +17,8 @@ const Header = () => {
   const [keyword, setKeyword] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-
+  const {user, setUser} = useContext(AuthContext)
+  const navigate = useNavigate();
   
 
   const searchOptions = [
@@ -26,7 +28,7 @@ const Header = () => {
     '음반명/상품명'
   ];
 
-  const navigate = useNavigate();
+  
   
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -83,6 +85,24 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  const handleLogout=async()=>{
+    try{
+      const response = await fetch('http://localhost:8080/api/logout',{
+        method: "POST",
+        credentials: "include"
+      });
+      if(response.ok){
+        setUser(false);
+        navigate('/');
+      } else{
+        console.log("로그아웃 실패", response.status);
+      }
+    }
+    catch (error) {
+      console.error("로그아웃 요청 에러", error);
+    }
+  }
 
   return (
     <header className='header'>
@@ -175,9 +195,14 @@ const Header = () => {
               </div>
             </div>
             <div className="header-icons">
-              <Link to="/login" className="header-icon">
+              <Link to="/auth" className="header-icon">
                 <LogIn size={20} />
               </Link>
+              {user &&
+              <button onClick={handleLogout} className='logout'>
+                <LogOut size={20} />
+              </button>
+              }
               <Link to="/post" className="header-icon">
                 <User size={20} />
               </Link>

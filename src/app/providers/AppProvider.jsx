@@ -12,6 +12,8 @@ import AdminLayout from "../layouts/AdminLayout"
 import FilterPage from "../../pages/CategoryPage/FilterPage"
 import { CartProvider } from "../../context/CartContext"
 import CartPage from "../../pages/CartPage"
+import AdminRouter from "../Router/AdminRouter"
+import AuthProvider from "../../context/AuthContext"
 
 const router=createBrowserRouter([
   {
@@ -38,7 +40,8 @@ const router=createBrowserRouter([
   },
   {
     path:"/auth",
-    element :<AuthLayout />,
+    element :
+    <AuthLayout />,
     children:[
       {
         index:true,
@@ -48,15 +51,20 @@ const router=createBrowserRouter([
   },
   {
     path:"/admin",
-    element :<AdminLayout />,
+    element :
+    
+    <AdminLayout />,
+    
     children:[
       {
         index:true,
-        element:<BucketPage/>
+        element:
+        <BucketPage/>
       },
       {
         path:"all",
-        element:<ProductDescription />
+        element:
+        <ProductDescription />
       },
       
     ]
@@ -79,8 +87,10 @@ const AppProvider=({children})=>(
   <ErrorBoundary>
     <FormSubmitBlocker>
       <CartProvider>
+        <AuthProvider>
       {children}
       <RouterProvider  router={router} />
+      </AuthProvider>
       </CartProvider>
     </FormSubmitBlocker>
   </ErrorBoundary>
