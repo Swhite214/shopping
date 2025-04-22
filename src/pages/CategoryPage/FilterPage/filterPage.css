@@ -1,0 +1,135 @@
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0px 50px 0px;
+}
+.result{
+ margin-left: 535px;
+border: 1px solid gray;
+  font-weight: bold;
+  width: 316px;
+  height: 40px;
+  border-radius: 2ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sort{
+    border: 1px solid gray;
+  font-weight: bold;
+  width: 316px;
+  height: 40px;
+  border-radius: 2ch;
+  padding-left: 10px;
+  text-align: center;
+  background-color: #fafafa;
+  
+}
+.filter{
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.bigwrap {
+    display: flex;
+    gap: 60px; /* 왼쪽 오른쪽 간격 */
+    padding: 20px;
+  }
+  
+  .leftSection {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rightSection {
+    flex: 1; /* 나머지 영역 차지 */
+  }
+  
+  .searchProduct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .popular {
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    font-weight: bold;
+    width: 367px;
+    height: 40px;
+    border-radius: 2ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ada9a9;
+    color: white;
+  }
+  
+  .wrap1 {
+    border: 1px solid #ada9a9;
+    width: 367px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .floor1 {
+    display: flex;
+    gap: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .floor2{
+    display: flex;
+    gap: 20px;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+  
+  .small {
+    border: 1px solid gray;
+    font-weight: bold;
+    width: 90px;
+    height: 40px;
+    border-radius: 2ch;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .buy{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    gap: 10px;
+    
+  }
+  .buy1{
+    border: solid;
+    width: 102px;
+    background-color: rgb(255, 3, 3);
+    color: white;
+    height: 50px;
+  }
+  .buy2{
+    border: solid;
+    width: 102px;
+    background-color: #0167cc;
+    color: white;
+    height: 50px;
+  }
+  .buy1:hover{
+    color: rgb(255, 3, 3);
+    background-color: white;
+  }
+  .buy2:hover{
+    color: #0167cc;
+    background-color: white;
+  }

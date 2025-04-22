@@ -4,6 +4,7 @@ const Modal=({
   onClose,
   title,
   children,
+  
 })=>{
   if(!isOpen)return null;
   return (
@@ -14,6 +15,7 @@ const Modal=({
         <div className="modal-body">
           {children}
         </div>
+        
       </div>
     </section>
   )

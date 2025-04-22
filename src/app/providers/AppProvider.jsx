@@ -8,6 +8,10 @@ import AuthPage from "@pages/AuthPage"
 import ErrorBoundary from "@shared/ui/ErrorBoundary"
 import BucketPage from "../../pages/BucketPage"
 import ProductDescription from "../../pages/ProductDescription"
+import AdminLayout from "../layouts/AdminLayout"
+import FilterPage from "../../pages/CategoryPage/FilterPage"
+import { CartProvider } from "../../context/CartContext"
+import CartPage from "../../pages/CartPage"
 
 const router=createBrowserRouter([
   {
@@ -22,6 +26,14 @@ const router=createBrowserRouter([
         path:"post",
         element:<PostPage />
       },
+      {
+        path:"filter",
+        element:<FilterPage />
+      },
+      {
+        path:"cart",
+        element:<CartPage />
+      },
     ]
   },
   {
@@ -35,12 +47,16 @@ const router=createBrowserRouter([
     ]
   },
   {
-    path:"/product",
-    element :<DefaultLayout />,
+    path:"/admin",
+    element :<AdminLayout />,
     children:[
       {
         index:true,
         element:<BucketPage/>
+      },
+      {
+        path:"all",
+        element:<ProductDescription />
       },
       
     ]
@@ -62,8 +78,10 @@ function AppProvider({children}){
 const AppProvider=({children})=>(
   <ErrorBoundary>
     <FormSubmitBlocker>
+      <CartProvider>
       {children}
       <RouterProvider  router={router} />
+      </CartProvider>
     </FormSubmitBlocker>
   </ErrorBoundary>
 )

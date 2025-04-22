@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import "./section2.css"
-import logo from "../../app/assets/react.svg"
+import logo from "../../app/assets/butterfly-logo.svg"
 import group1 from "../../app/assets/Group1.svg"
 import group2 from "../../app/assets/Group2.svg"
 import group3 from "../../app/assets/Group3.svg"
@@ -18,7 +18,7 @@ function Section2() {
     <div className='bbb'>할인</div>
     <div className='ccc'>4월 1일 - 5월 31일</div>
     <div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
-    <a href='/'>이벤트 내용을 입력해주세요</a>
+    <a href='/'>모든 회원분들을 위한 혜택!</a>
     <div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
     <div className='ddd'><img src={logo} alt="" /> 4TunesRecords</div>
     </td>

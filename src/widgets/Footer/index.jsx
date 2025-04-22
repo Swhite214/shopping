@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css'
-import logo from '../../app/assets/react.svg'
+import logo from '../../app/assets/butterfly-logo.svg'
 import {ArrowUp} from "lucide-react"
 const Footer = () => {
 
