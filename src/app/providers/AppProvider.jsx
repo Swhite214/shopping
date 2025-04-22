@@ -12,8 +12,8 @@ import AdminLayout from "../layouts/AdminLayout"
 import FilterPage from "../../pages/CategoryPage/FilterPage"
 import { CartProvider } from "../../context/CartContext"
 import CartPage from "../../pages/CartPage"
-import AdminRouter from "../Router/AdminRouter"
 import AuthProvider from "../../context/AuthContext"
+import AdminRouter from "../Router/AdminRouter"
 
 const router=createBrowserRouter([
   {
@@ -52,19 +52,21 @@ const router=createBrowserRouter([
   {
     path:"/admin",
     element :
-    
     <AdminLayout />,
-    
     children:[
       {
         index:true,
         element:
+        <AdminRouter>
         <BucketPage/>
+        </AdminRouter>
       },
       {
         path:"all",
         element:
+        <AdminRouter>
         <ProductDescription />
+        </AdminRouter>
       },
       
     ]

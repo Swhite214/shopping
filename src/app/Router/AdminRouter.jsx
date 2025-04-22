@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 
-const AdminRouter=({Children})=>{
+const AdminRouter=({children})=>{
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     console.log('[AdminRouter] user from context ->', user);
@@ -15,6 +15,6 @@ const AdminRouter=({Children})=>{
         }
     }, [user, navigate]);
     if (user === undefined) return null;
-    return user.role === 'ADMIN' ? <>{Children}</> : null;
+    return user.role === 'ADMIN' ? <>{children}</> : null;
 }
 export default AdminRouter;

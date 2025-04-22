@@ -3,13 +3,12 @@ import AdminRouter from "../Router/AdminRouter";
 
 const AdminLayout=()=>{
     return(<>
-    <AdminRouter>
+    
     <div className="app-container">
       <main className="main-content">
         <Outlet />
       </main>
     </div>
-    </AdminRouter>
         </>
     )
 }
