@@ -49,6 +49,16 @@ const router=createBrowserRouter([
         element:<BucketPage/>
       },
     ]
+  },
+  {
+    path:"/categories/:categoryId",
+    element :<DefaultLayout />,
+    children:[
+      {
+        index:true,
+        element:<ProductPage />
+      },
+    ]
   }
 ])
 

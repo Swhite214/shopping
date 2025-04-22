@@ -1,24 +1,42 @@
 import { Link } from 'react-router-dom';
 import './GlobalNavBar.css'
+import { useCategory } from '../../shared/store/useCategory';
 
-const GlobalNavBar=()=>{return (<>
+const GlobalNavBar=()=>{
+   const  {categories}=useCategory();
+
+    return (<>
     <nav className="category-nav">
         <ul className="category-list">
+            {categories.map((category)=>
+            <li key={category.id}>
+                <Link to={`/categories/${category.id}`}>{category.name}</Link>
+                <ul className="subcategory-list">
+                    {category.subCategories.map((sub)=>
+                    <li key={sub.id}>
+                        <Link to={`/categories/${sub.id}`}>{sub.name}</Link>
+                    </li>
+                    )}                    
+                </ul>
+            </li>
+            )}
+
+            {/*
             <li>
             <Link to="/">국내음반</Link>
             <ul className="subcategory-list">
-                <li><Link to="/products">K-pop</Link></li>
-                <li><Link to="/products">R&B</Link></li>
-                <li><Link to="/products">Balad</Link></li>
+                <li><Link to="/">K-pop</Link></li>
+                <li><Link to="/">R&B</Link></li>
+                <li><Link to="/">Balad</Link></li>
             </ul>
             </li>
             <li>
-            <Link to="/">해외음반</Link>
+            <Link to="/categories">해외음반</Link>
             <ul className="subcategory-list">
-                <li><Link to="/">J-Pop</Link></li>
-                <li><Link to="/">Pop</Link></li>
-                <li><Link to="/">R&B</Link></li>
-                <li><Link to="/">HipHop</Link></li>
+                <li><Link to="/categories">J-Pop</Link></li>
+                <li><Link to="/categories">Pop</Link></li>
+                <li><Link to="/categories">R&B</Link></li>
+                <li><Link to="/categories">HipHop</Link></li>
 
             </ul>
             </li>
@@ -45,6 +63,7 @@ const GlobalNavBar=()=>{return (<>
                 <li><Link to="/">한정판 굿즈</Link></li>
             </ul>
             </li>
+            */}
         </ul>
     </nav>
 </>)}

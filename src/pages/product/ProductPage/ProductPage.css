@@ -1,0 +1,18 @@
+.products-wrap{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+.products-wrap .curr-category{
+    margin-right: 20px;
+}
+.products-wrap .main-categories{
+    font-weight: 700;
+    padding: 1em;
+    border: 1px solid #777;
+}
+.products-wrap .sub-categories{
+    
+    width: 280px;
+    padding: 1em;
+}
