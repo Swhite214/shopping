@@ -13,7 +13,7 @@ const AuthPage = () => {
     <div className="auth-page">
       <div className="auth-wrap">
         <header id="auth-logo">
-          <Link to={"/"}>ORANGE</Link>
+          <Link to={"/"}>4TunesRecords</Link>
         </header>
         <section id="auth-container">
           {isLogin?
@@ -25,7 +25,7 @@ const AuthPage = () => {
           {isLogin?(
           //처음보이는 영역
           <div className="auth-switch">
-            <span>계정이 없으신가요?</span>
+            <span className="black">계정이 없으신가요?</span>
             <Button onClick={()=>setIsLogin(!isLogin)}  text={"가입하기"} border={true} fullWidth={true}/>
           </div>):
           (<div className="auth-switch">
@@ -38,7 +38,7 @@ const AuthPage = () => {
         <footer id="auth-footer">
           <div>
             <span className='com'>
-              <Link to={"/"}>ORANGE</Link>
+              <Link to={"/"}>4TunesRecords</Link>
             </span>
             <span className="text">All rights reserved.</span>
           </div>

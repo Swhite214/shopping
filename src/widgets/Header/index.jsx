@@ -194,6 +194,10 @@ const Header = () => {
                 <div className="volume-filled"></div>
               </div>
             </div>
+            {
+              user && 
+              <p>{user?.nick}님 환영합니다!</p>
+            }
             <div className="header-icons">
               <Link to="/auth" className="header-icon">
                 <LogIn size={20} />
@@ -203,7 +207,7 @@ const Header = () => {
                 <LogOut size={20} />
               </button>
               }
-              <Link to="/post" className="header-icon">
+              <Link to="/mypage" className="header-icon">
                 <User size={20} />
               </Link>
               <Link to="/cart" className="header-icon">

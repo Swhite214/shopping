@@ -14,6 +14,7 @@ import { CartProvider } from "../../context/CartContext"
 import CartPage from "../../pages/CartPage"
 import AuthProvider from "../../context/AuthContext"
 import AdminRouter from "../Router/AdminRouter"
+import ProductDetail from "../../pages/ProductDetail"
 
 const router=createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router=createBrowserRouter([
         element:<HomePage />
       },
       {
-        path:"post",
+        path:"mypage",
         element:<PostPage />
       },
       {
@@ -35,6 +36,10 @@ const router=createBrowserRouter([
       {
         path:"cart",
         element:<CartPage />
+      },
+      {
+        path:"/products/:productId",
+        element:<ProductDetail />
       },
     ]
   },

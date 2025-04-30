@@ -63,12 +63,22 @@ const FilterPage = () => {
   
 
   const handleAddToCart = (product) => {
-    addToCart(product);
-    setModalOpen(true);
-    setTimeout(() => {
-      setModalOpen(false);
-      navigate("/cart");
-    }, 1500);
+    axios.post('http://localhost:8080/api/bucket', {
+      productId: product.productId,
+      quantity: 1, // 기본 수량 1로 설정
+    }, {
+      withCredentials: true,
+    })
+    .then(() => {
+      setModalOpen(true);
+      setTimeout(()=>{
+        navigate("/cart");
+      },2000);
+    })
+    .catch(err => {
+      console.error("장바구니 추가 실패", err);
+      alert("로그인이 필요합니다!");
+    });
   };
 
   return (
@@ -102,6 +112,7 @@ const FilterPage = () => {
       <div className="searchProduct">
         {sortedProducts.map(p => (
           <div key={p.productId} style={{ border: "1px solid #ccc", padding: "12px", width: "300px" }}>
+            <Link to={`/products/${p.productId}`}>
             <img
               src={p.image?.url}
               alt={p.image?.orgName}
@@ -113,6 +124,7 @@ const FilterPage = () => {
             <p><strong>설명:</strong> {p.description}</p>
             <p><strong>가격:</strong> {p.price} 원 &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
             <strong>할인여부: </strong>{p.discount ? '할인중' : '정상가'}</p>
+            </Link>
             <div className="buy">
               
               <button onClick={()=>handleAddToCart(p)} className="buy1" ><ShoppingCart size={30}  /></button>

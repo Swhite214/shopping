@@ -12,9 +12,14 @@ const Footer = () => {
           <header className='footer'>
               <h1>푸터</h1>
               <div className='footer-container'>
+                <div className='logo-wrapper'>
                   <Link to={"/"}>
                       <img src={logo} alt="로고" className='logo' />
                   </Link>
+                  <Link to="/" className='logo-text'>
+                    4TunesRecords
+                </Link>
+                  </div>
                   <p className='text'>
                       <span>서울특별시 강남구 테헤란로 14길 6 남도빌딩</span>
                       <span> /team: 박찬우 김영진 이예준</span>

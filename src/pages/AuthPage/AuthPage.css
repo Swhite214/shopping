@@ -23,10 +23,10 @@
 }
 
 #auth-logo{
-  font-family: "Monoton";
-  font-size: 36px;
+  font-weight: bold;
+  font-size: 30px;
   margin-bottom: 40px;
-  color: orangered;
+  color: #0767c8;
 }
 #auth-container{
   border-top: 1px solid #e9e9e9;
@@ -45,4 +45,5 @@
   font-size: 12px;
 }
 #auth-footer .text{color: #777;margin-left: 10px;}
+.black{color: black;}
 

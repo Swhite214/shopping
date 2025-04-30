@@ -2,82 +2,82 @@
 const imageList =[
     // 1페이지
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409246&FMT=2&ATTACH=M&TYPE=C",
-        desc: "선재 업고 튀어 OST (LP) 넘버링 한정반",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/IULovePoem-17153306.svg",
+        desc: "아이유 - [Love Poem] 미니 4집 CHAT-SHIRE",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408997&FMT=2&ATTACH=M&TYPE=C",
-        desc: "대성 (DAESUNG) - 미니앨범1집 [D’s WAVE] (Yellow Version)",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/IULILAC-17419212.svg",
+        desc: "아이유 - 정규 5집 [LILAC] ",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408958&FMT=2&ATTACH=M&TYPE=C",
-        desc: "투모로우바이투게더 - WORLD TOUR [ACT : PROMISE] ENCORE IN SEOUL",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Drip-17665424.svg",
+        desc: "베이비몬스터 (BABY MONSTER) - 정규 1집 [DRIP]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408960&FMT=2&ATTACH=M&TYPE=C",
-        desc: "세븐틴 - Episode : Oh, My Days and Sweet Voice B",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Ubermensch-18043838.svg",
+        desc: "G-Dragon - Ubermensch : Oh, 다시 한번 자신을 초월하라",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408782&FMT=2&ATTACH=M&TYPE=C",
-        desc: "엑스디너리 히어로즈 (Xdinary Heroes) - 미니 6집 [Beautiful Mind] 랜덤",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Whiplash-18771022.svg",
+        desc: "에스파 (aespa) - 미니 5집 [Whiplash]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409065&FMT=2&ATTACH=M&TYPE=C",
-        desc: "범규 - BEOMGYU’s Mixtape: Panic",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Armageddon-19027436.svg",
+        desc: "에스파 (asepa) - 정규 1집 [Armageddon]",
     },
 
 
     //2페이지
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000406148&FMT=2&ATTACH=M&TYPE=B",
-        desc: "베이비몬스터 (BABYMONSTER) - 1st FULL ALBUM [DRIP] BANDANA Ver. (Limited Edition)",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/HelpEverHurtNever-25115776.svg",
+        desc: "Fujii Kaze - 1st FULL ALBUM [Help Ever Hurt Never] ",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000396993&FMT=2&ATTACH=M&TYPE=B",
-        desc: "뉴진스 (NewJeans) - 2nd EP ’Get Up’ [Weverse Albums ver.]랜덤",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Pretender-26393397.svg",
+        desc: "Official Hige Dandism - 2nd EP [Pretender]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000406105&FMT=2&ATTACH=M&TYPE=B",
-        desc: "아일릿 (ILLIT) - 미니 2집 [I’LL LIKE YOU] (Weverse Albums ver.)",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/IDOL-28069929.svg",
+        desc: "YOASOBI - [IDOL]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409066&FMT=2&ATTACH=M&TYPE=C",
-        desc: "투어스 (TWS) - 미니 3집 [TRY WITH US] 랜덤",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/BETELGEUSE-28678078.svg",
+        desc: "Yuuri - [BETELGEUSE]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409007&FMT=2&ATTACH=M&TYPE=B",
-        desc: "엔시티 위시 (NCT WISH) - 미니 2집 [poppop] (WICHU Ver.)",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/BOOTLEG-27414196.svg",
+        desc: "Yonezu Kenshi - 정규 4집 [BOOTLEG]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000409342&FMT=2&ATTACH=M&TYPE=B",
-        desc: "엔하이픈 (ENHYPEN) - WORLD TOUR [WALK THE LINE] IN GOYANG",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/Unity-29033731.svg",
+        desc: "Mrs.Green Apple - 미니 [Unity]",
     },
 
 
     //3페이지
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000400902&FMT=2&ATTACH=M&TYPE=B",
-        desc: "아이유 (IU) - 미니 6집 [The Winning] (Special Ver.)",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/golden-370152554.svg",
+        desc: "Kacey Musgraves - 정규 4집 [Golden Hour]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408994&FMT=2&ATTACH=M&TYPE=B",
-        desc: "방탄소년단 (BTS) - 7 Moments",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/kacey-370277561.svg",
+        desc: "Kacey Musgraves - 정규 [Same Trailer Different Park]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000408299&FMT=2&ATTACH=M&TYPE=B",
-        desc: "지드래곤 (G-DRAGON) - 3RD ALBUM [Übermensch] JEWEL ver. 랜덤",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/draft-370423721.svg",
+        desc: "Draft Punk - Last ALBUM [Random Access Memories]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000405695&FMT=2&ATTACH=M&TYPE=B",
-        desc: "에스파 (aespa) - 미니 5집 [Whiplash] (SMini Ver.) 랜덤",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/punk-370556764.svg",
+        desc: "Draft Punk - 정규 1집 [Discovery]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=P000482383&FMT=2&ATTACH=PO&TYPE=B",
-        desc: "아이브 (IVE) - EP 3집 [IVE EMPATHY] 3종 세트",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/norah-370740891.svg",
+        desc: "Norah Jones - [Come Away with Me]",
     },
     {
-        src: "https://sfs.synnara.co.kr/App/ImageViewerEShop?IID=M000404105&FMT=2&ATTACH=M&TYPE=B",
-        desc: "UNIS (유니스) - 싱글 1집 [CURIOUS] (Photobook Ver.) 2종 세트",
+        src: "https://fortuneshopping.s3.ap-northeast-2.amazonaws.com/upload/101/blue-371131911.svg",
+        desc: "Kenny Burrell - [Midnight Blue]",
     },
 ];
 
